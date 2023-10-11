@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+
+/* GENERAL */
+* {
+    margin: 0 auto;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-fluid {
+    background-color: #c7d1df;
+    font-size: color black;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.contenedor {
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    contain: paint;
+}
+
+/* SECCION CONTENEDOR DE ITEMS */
+.contenedor .contenedor-items {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    width: 60%;
+    transition: 0.3s;
+}
+
+.contenedor .contenedor-items .item {
+    max-width: 200px;
+    margin: auto;
+    border: 1px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.contenedor .contenedor-items .item .img-item {
+    width: 100%;
+}
+
+.contenedor .contenedor-items .item:hover {
+    box-shadow: 0 0 10px #666;
+    transform: scale(1.05);
+}
+
+.contenedor .contenedor-items .item .titulo-item {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contenedor .contenedor-items .item .precio-item {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.contenedor .contenedor-items .item .boton-item {
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: black;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* SECCION CARRITO */
+.carrito {
+    border: 1px solid #666;
+    width: 35%;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 0;
+    transition: 0.3s;
+    margin-right: -100%;
+    opacity: 0;
+}
+
+.carrito .header-carrito {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.carrito .carrito-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #666;
+    padding: 20px;
+}
+
+.carrito .carrito-item img {
+    margin-right: 20px;
+}
+
+.carrito .carrito-item .carrito-item-titulo {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.carrito .carrito-item .selector-cantidad {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.carrito .carrito-item .carrito-item-cantidad {
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.carrito .carrito-item .selector-cantidad i {
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.carrito .carrito-item .carrito-item-precio {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin bottom: 5px;
+}
+
+.carrito .carrito-item .btn-eliminar {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #000;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+
+.carrito .carrito-item .btn-eliminar i {
+    pointer-events: none;
+}
+
+.carrito-total {
+    background-color: #f3f3f3;
+    padding: 30px;
+}
+
+.carrito-total .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carrito-total .btn-pagar {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carrito-total .btn-pagar:hover {
+    transform: scale(1.05);
+}
+
+/* SECCION DESCRIPCION DE LOS ITEMS */
+p {
+    display: flex;
+    justify-content: left;
+}
+
+.containerservicios {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1.4fr 0.6fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "tituloservicios tituloservicios tituloservicios"
+                         "fotoservicios descripcionservicios descripcionservicios"
+                         "fotoservicios descripcionservicios descripcionservicios"
+                         "comprar comprar comprar";
+    border: dashed 3px;
+    margin: 30px;
+    background-color: white;
+}
+
+.tituloservicios {
+    grid-area: tituloservicios;
+    font-family: sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.fotoservicios {
+    grid-area: fotoservicios;
+}
+
+.descripcionservicios {
+    grid-area: descripcionservicios;
+    font-family: Helvetica;
+    font-size: 25px;
+    padding-right: 40px;
+}
+
+.comprar {
+    grid-area: comprar;
+}
+
+/*Aquí debajo va el FOOTER*/
+footer {
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url(../Images/background-footer.svg);
+    background-size: cover;
+}
+
+.container__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.box__footer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box__footer .logo img {
+    width: 180px;
+}
+
+.box__footer .terms {
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box__footer h2 {
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box__footer a {
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover {
+    opacity: 0.8;
+}
+
+.box__footer a .fab {
+    font-size: 20px;
+}
+
+.box__copyright {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p {
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+box__copyright hr {
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+
+/* Social Icon (Añade esto al final del CSS) */
+.social {
+    width: 48px;
+    position: fixed;
+    top: 50px;
+    right: 0;
+}
+
+.social {
+    top: 50%;
+    height: 205px;
+    margin-top: -100px;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width: 850px) {
+    .contenedor {
+        display: block;
+    }
+    
+    .contenedor-items {
+        width: 100%;
+    }
+    
+    .carrito {
+        width: 100%;
+    }
+
+    /* PAGINA MIS LIBROS */
+    .containerservicios {  
+        border: dashed 2px;
+        margin: 5px;
+    }
+    
+    .tituloservicios {
+        font-size: 30px;
+        padding: 5px;
+        text-align: left;
+    }
+    
+    .fotoservicios img {
+        width: 100px;
+    }
+    
+    .descripcionservicios {
+        font-size: 10px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+    }
+    
+    /* ... Otro CSS para dispositivos móviles ... */
+}
+
+/* SECCION CONTENEDOR DE ITEMS */
+.contenedor .contenedor-items {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    width: 80%;
+    transition: 0.3s;
+}
+
+/* SECCION RESPONSIVE PARA DISPOSITIVOS MÓVILES */
+@media screen and (max-width: 850px) {
+    .contenedor .contenedor-items {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 contenedores por fila en dispositivos móviles */
+        grid-gap: 10px; /* Ajusta el espacio entre los contenedores en dispositivos móviles */
+    }
+
+    /* Reglas de estilo adicionales para dispositivos móviles si es necesario */
+}
+
+
+
